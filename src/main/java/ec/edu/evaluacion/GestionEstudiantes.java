@@ -105,7 +105,7 @@ public class GestionEstudiantes {
         if (indice==estudiantes.size()){
             return 0;
         }
-        return estudiantes.get(indice).getPromedio()+sumaPromediosRecursiva(indice+1)
+        return estudiantes.get(indice).getPromedio()+sumaPromediosRecursiva(indice+1);
 
     }
 
