@@ -5,10 +5,9 @@ import java.util.List;
 
 public class GestionEstudiantes {
     private ArrayList<Estudiante> estudiantes;
-
     public GestionEstudiantes() {
-
-
+        estudiantes = new ArrayList<>();
+        precargarEstudiantes();
     }
 
     private void precargarEstudiantes() {
@@ -19,18 +18,35 @@ public class GestionEstudiantes {
         estudiantes.add(new Estudiante(105, "María Ruiz", "TI", 8.9));
     }
 
-    public boolean agregarEstudiante(Estudiante estudiante) {
+    public ArrayList<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
 
+    public boolean agregarEstudiante(Estudiante estudiante) {
+        if (codigoExiste(estudiante.getCodigo())){
+            return false;
+        }
+        estudiantes.add(estudiante);
+        return true;
     }
 
     public Estudiante buscarPorCodigoSecuencial(int codigo) {
-
+        for (Estudiante e:estudiantes){
+            if (e.getCodigo()==codigo){
+                
+            }
+        }
 
 
     }
 
     public Estudiante buscarPorNombreSecuencial(String nombre) {
-
+        for (Estudiante e :estudiantes){
+            if (e.getNombre().equalsIgnoreCase(nombre)){
+                return e;
+            }
+        }
+        return null;
     }
 
     public Estudiante buscarPorCodigoBinario(int codigo) {

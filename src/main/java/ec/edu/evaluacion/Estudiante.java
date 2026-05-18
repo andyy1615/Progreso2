@@ -15,8 +15,45 @@ public class Estudiante {
         this.promedio = promedio;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
 
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
 
+    public String getNombre() {
+        return nombre;
+    }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
+    public double getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante" +
+                "Codigo:" + codigo +
+                "Nombre:" + nombre +
+                "Carrera='" + carrera +
+                "Promedio=" + promedio;
+
+    }
 }
